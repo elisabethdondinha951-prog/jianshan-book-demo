@@ -148,6 +148,12 @@ html,body{overflow-x:hidden}
 .review-page .review-edit{min-height:49px}
 .editor .stars{margin-top:19px}
 .editor #finished{margin-top:13px}
+/* Keep the fixed headers full width on displays wider than the 1920px design canvas. */
+@media (min-width:1921px){
+  .topbar,.reader-toolbar{width:100vw}
+  .nav-inner,.reader-toolbar-inner{width:1920px;max-width:none;margin-inline:auto}
+  body:has(.reader){background:#f0eee6}
+}
 .detail-status{min-height:73px}
 .shelf-page .recent-content{padding-top:14px}
 .shelf-page .recent-content p:nth-of-type(2){margin-top:26px}
