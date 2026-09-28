@@ -1,0 +1,166 @@
+/* Final high-fidelity V5 canvas: all coordinates refer to the 1920px Figma frame. */
+html,body{overflow-x:hidden}
+#app{width:1920px;margin:0 auto;zoom:var(--v5-scale,1)}
+.topbar,.reader-toolbar{width:1920px}
+#app:has(> .topbar){padding-top:86px}
+.topbar{position:fixed;top:0;left:0;z-index:40}
+.nav-inner{position:relative;height:86px}
+.brand{display:flex;align-items:flex-start;justify-content:center;align-self:center;margin-top:0;height:44px;min-width:230px;text-align:left;font:600 29px/1.25 var(--serif);letter-spacing:3.5px}
+.brand small,.reader-brand small{display:none!important}
+.nav{height:86px;align-self:center;margin-left:142px;gap:76px}
+.nav a{position:relative;height:86px;width:142px;border:0!important;padding:0;align-items:center;justify-content:center;text-align:center;font:400 18px/32px var(--sans)}
+.nav a.active{font-size:22px;font-weight:500}
+.nav a.active:after{content:"";position:absolute;left:15px;bottom:0;width:112px;height:3px;background:var(--green)}
+.nav-note{position:absolute;left:1515px;top:32px;margin:0;font:400 15px/1.2 var(--serif)}
+.container{width:1920px;max-width:none;margin:0;padding:0}
+.page-head{margin:0}
+.page-head h1{margin:0;font:500 52px/1.25 var(--serif);letter-spacing:0}
+.kicker{display:none}
+.shelf-page{position:relative;min-height:1144px}
+.shelf-page .page-head{position:absolute;left:180px;top:58px;width:1560px;height:70px;display:block}
+.shelf-page .shelf-add{position:absolute;left:1390px;top:11px;width:170px;height:54px}
+.shelf-page .recent-section{position:absolute;left:180px;top:204px;width:1560px;height:335px}
+.shelf-page .recent-section .section-header{position:absolute;left:0;top:0;width:1560px;height:31px;margin:0}
+.shelf-page .recent-section .section-header h2{font:500 15px/1.2 var(--sans)}
+.shelf-page .recent-section:after{content:"";position:absolute;top:30px;left:0;width:1560px;height:1px;background:var(--line)}
+.shelf-page .recent{position:absolute;left:0;top:51px;width:1560px;height:261px;display:flex;gap:41px}
+.shelf-page .recent .cover-link{width:174px;min-width:174px;height:261px}
+.shelf-page .recent .cover{width:174px;height:261px}
+.shelf-page .recent-content{padding-top:11px}
+.shelf-page .recent-content h3{font:500 32px/1.3 var(--serif);margin:0}
+.shelf-page .recent-content p{font:400 16px/1.4 var(--sans);margin:13px 0 0}
+.shelf-page .recent-content .btn{margin-top:26px;width:170px;height:51px}
+.shelf-page .recent-quote{position:absolute;left:1010px;top:70px;font:400 25px/1.4 var(--serif)}
+.shelf-page .shelf-catalog{position:absolute;left:180px;top:539px;width:1560px;min-height:520px;border-top:1px solid var(--line)}
+.shelf-page .shelf-catalog .section-header{position:absolute;left:0;top:27px;width:1560px;height:27px;margin:0;padding:0;border:0}
+.shelf-page .shelf-catalog .section-header h2{font:500 21px/1.3 var(--serif);color:var(--text)}
+.shelf-page .shelf-catalog .tabs{position:absolute;left:0;top:79px;display:flex;gap:11px;margin:0}
+.shelf-page .shelf-catalog .tab{width:93px;min-width:93px;height:41px;padding:0;font-size:17px}
+.shelf-page .shelf-catalog .search{position:absolute;left:1140px;top:79px;width:420px;height:41px;min-height:41px;padding:0 15px 0 55px;background-position:16px center}
+.shelf-page .shelf-catalog .book-grid{position:absolute;left:0;top:154px;display:grid;grid-template-columns:repeat(4,250px);column-gap:145px;row-gap:50px;margin:0}
+.shelf-page .book-card .cover-link{width:204px;height:306px;margin-left:8px}
+.shelf-page .book-card .cover{height:306px}
+.shelf-page .more-wrap{transform:translateX(-8px)}
+.shelf-page>.empty{position:absolute;left:0;top:235px;width:1920px;padding:0}
+.shelf-page>.empty:before{content:"";position:absolute;left:180px;top:-70px;width:1560px;height:1px;background:var(--line)}
+.shelf-page>.empty .empty-image{width:520px;height:390px;margin:0 auto 4px}
+.shelf-page>.empty h2{font:400 30px/1.4 var(--serif);margin:0 0 15px}
+.shelf-page>.empty p{font:400 17px/1.5 var(--sans);margin:0 0 43px}
+.discover-page{position:relative;min-height:1634px}
+.discover-page .page-head{position:absolute;left:180px;top:58px;width:1560px;height:70px;display:block}
+.discover-page .page-head .search{position:absolute;left:1040px;top:11px;width:520px;height:54px}
+.discover-page .recommend-section{position:absolute;left:180px;top:206px;width:1580px;height:374px}
+.discover-page .recommend-section .section-header{position:absolute;left:0;top:0;width:1560px;height:39px;margin:0;padding:0;border:0}
+.discover-page .recommend-section .section-header h2{font:500 22px/1.3 var(--serif)}
+.discover-page .recommend-section .section-hint{margin-left:auto;text-align:right;font:400 15px/1.4 var(--sans)}
+.discover-page .recommend-section:before{content:"";position:absolute;left:0;top:38px;width:1560px;height:1px;background:var(--line)}
+.discover-page .recommendations{position:absolute;left:0;top:65px;display:grid;grid-template-columns:repeat(3,500px);gap:40px;margin:0}
+.discover-page .recommend{width:500px;height:249px;min-height:249px;padding:21px 23px;gap:25px}
+.discover-page .recommend .cover{width:136px;min-width:136px;height:204px}
+.discover-page .recommend .rec-copy{width:284px}
+.discover-page .recommend .rec-copy h3{font:500 28px/1.3 var(--serif);margin:31px 0 12px}
+.discover-page .recommend .rec-copy span{font-size:15px}
+.discover-page .recommend .rec-copy p{font:400 16px/1.6 var(--sans);margin:20px 0 0}
+.discover-page .discover-catalog{position:absolute;left:180px;top:580px;width:1560px;min-height:1000px}
+.discover-page .discover-catalog .section-header{position:absolute;left:0;top:0;width:1560px;height:48px;margin:0;padding:0;border:0}
+.discover-page .discover-catalog .section-header h2{font:500 26px/1.3 var(--serif)}
+.discover-page .discover-catalog .section-hint{margin-left:auto;text-align:right;font:400 15px/1.4 var(--sans)}
+.discover-page .discover-catalog:before{content:"";position:absolute;left:0;top:47px;width:1560px;height:1px;background:var(--line)}
+.discover-page .discover-catalog .book-grid.five{position:absolute;left:0;top:77px;display:grid;grid-template-columns:repeat(5,250px);column-gap:66px;row-gap:0;grid-auto-rows:457px;margin:0}
+.discover-page .book-grid.five .book-card{width:250px}
+.discover-page .book-grid.five .book-card .cover-link{width:198px;height:297px;margin-left:4px}
+.discover-page .book-grid.five .book-card .cover{height:297px}
+.discover-page .book-grid.five .book-desc{margin-top:10px}
+.discover-page .search-results{top:206px}
+.discover-page .search-results .book-grid.five{top:77px}
+.detail-actions .btn.subtle{cursor:pointer;opacity:1}
+.reader-toolbar .reader-brand{display:block;margin:0;width:230px;min-width:230px;font:600 29px/1.2 var(--serif);letter-spacing:3.5px}
+.reader-toolbar .reader-book{display:flex;align-items:center;justify-content:center;min-width:280px;height:44px;margin-left:20px;border-left:1px solid var(--line);padding-left:0;font:400 21px/1.2 var(--sans)}
+.reader-eyebrow{letter-spacing:0}
+.review-page{position:relative;min-height:1154px}
+.review-page .page-head{position:absolute;left:180px;top:58px}
+.review-page>.tabs{position:absolute;left:180px;top:177px;margin:0}
+.review-page>.review-list,.review-page>.empty{position:absolute;left:180px;top:283px;width:1560px}
+.discover-page .recommend-section .section-header,.discover-page .discover-catalog .section-header{align-items:flex-start}
+.discover-page .recommend-section .section-hint{margin-top:6px}
+.discover-page .discover-catalog .section-hint{margin-top:10px}
+.review-page:before{content:"";position:absolute;left:180px;top:251px;width:1560px;height:1px;background:var(--line)}
+.review-page>.tabs{gap:13px}
+.review-page>.tabs .tab:first-child{width:148px;height:41px}
+.review-page>.tabs .tab:last-child{width:217px;height:41px}
+.review-page>.review-list{border:0;margin:0;padding:0}
+.review-page .review-item{position:relative;display:block;width:1560px;height:365px;padding:0;margin:0;border:0}
+.review-page .review-item:after{content:"";position:absolute;left:0;top:316px;width:1560px;height:1px;background:var(--line)}
+.review-page .review-cover{position:absolute;left:0;top:0;width:162px;height:243px}
+.review-page .review-cover .cover{width:162px;height:243px}
+.review-page .review-copy h3{position:absolute;left:221px;top:7px;margin:0;font:500 27px/1.3 var(--serif)}
+.review-page .review-date{position:absolute;left:223px;top:56px;color:var(--muted);font:400 15px/1.4 var(--sans)}
+.review-page .review-stars{position:absolute;left:223px;top:101px;color:var(--green);font:400 24px/1.2 Arial,sans-serif}
+.review-page .review-note{position:absolute;left:223px;top:151px;width:870px;margin:0;font:400 17px/1.7 var(--sans)}
+.review-page .review-edit{position:absolute;left:1350px;top:8px;width:210px;height:49px}
+.editor{position:relative;width:1920px;max-width:none;min-height:1124px;margin:0;padding:0}
+.editor .back{position:absolute;left:180px;top:42px;margin:0;font:500 16px/1.3 var(--sans);color:var(--green)}
+.editor .editor-top{position:absolute;left:710px;top:64px;width:500px;height:132px;margin:0;text-align:center}
+.editor .editor-top h1{font:500 46px/1.3 var(--serif);margin:0}
+.editor .editor-top p{font:400 17px/1.4 var(--sans);color:var(--muted);margin:5px 0 0}
+.editor:before,.editor:after{content:"";position:absolute;left:360px;width:1200px;height:1px;background:var(--line)}
+.editor:before{top:194px}.editor:after{top:883px}
+.editor #edit-form{position:absolute;left:360px;top:0;width:1200px;height:1000px}
+.editor #edit-form>.field{position:absolute;margin:0}
+.editor #edit-form>.field:nth-child(1){left:0;top:255px;width:1200px}
+.editor #edit-form>.field:nth-child(2){left:0;top:382px;width:1200px}
+.editor #edit-form>.field:nth-child(3){left:0;top:761px;width:500px}
+.editor #edit-form>.field:nth-child(4){left:710px;top:761px;width:490px}
+.editor .field-title,.editor .field label{font:500 16px/1.3 var(--sans);margin:0}
+.editor #edit-form>.field:nth-child(1) .tabs{display:flex;gap:13px;margin:16px 0 0}
+.editor #edit-form>.field:nth-child(1) .tab{width:210px;height:41px}
+.editor #thought{display:block;width:1200px;height:273px;min-height:273px;margin-top:17px;padding:23px 24px;font:400 18px/1.7 var(--sans)}
+.editor .count{font-size:14px;margin-top:7px}
+.editor .stars{margin-top:18px;gap:8px}
+.editor .star{font-size:35px;line-height:1.1}
+.editor #finished{display:block;width:490px;height:54px;margin-top:18px;padding:10px 18px;font-size:17px}
+.editor .form-actions{position:absolute;left:722px;top:925px;margin:0;display:flex;gap:20px}
+.editor .form-actions .btn:first-child{width:192px;height:54px}
+.editor .form-actions .btn:last-child{width:266px;height:54px}
+.detail .back{transform:translateY(-3px)}
+.detail-kicker{margin-bottom:19px}
+.detail h1{width:680px}
+.detail-meta{margin-top:15px;margin-bottom:45px;margin-left:3px}
+.detail-actions{gap:15px}
+.detail-status{position:relative}
+.detail-status .tabs{position:absolute;left:0;top:33px;margin:0!important;display:flex;gap:12px}
+.detail-status .tab{width:134px;height:41px}
+.detail-sections{grid-template-columns:530px 535px;gap:135px;padding-top:32px}
+.detail-sections p{white-space:pre-line}
+.reader-toolbar-inner{gap:0}
+.reader-toolbar{position:fixed;top:0;left:0}
+.reader-toolbar .reader-brand{display:flex;align-items:flex-start;justify-content:center;align-self:center;margin-top:0;height:44px;text-align:left;font:600 29px/1.25 var(--serif);letter-spacing:3.5px}
+.reader-tools .iconbtn{display:grid;place-items:center;padding:0;line-height:0}
+.reader-tools .iconbtn svg{display:block;width:24px;height:24px;flex:none;stroke-width:1.8}
+.reader-tools .iconbtn[data-action="toggle-shelf"] svg{width:22px;height:22px;stroke-width:1.7}
+.shelf-page .more-wrap .menu{top:36px;bottom:auto;right:0;scroll-margin-bottom:12px}
+.shelf-page:has(.menu){min-height:1320px}
+.editor .star{touch-action:none;user-select:none}
+.reader-toolbar .reader-book{margin-left:20px}
+.reader-paper{margin-top:144px}
+.reader-eyebrow{margin-bottom:36px}
+.reader-inner h1{width:790px;margin-left:-35px;margin-bottom:87px}
+.review-page .review-edit{min-height:49px}
+.editor .stars{margin-top:19px}
+.editor #finished{margin-top:13px}
+.detail-status{min-height:73px}
+.shelf-page .recent-content{padding-top:14px}
+.shelf-page .recent-content p:nth-of-type(2){margin-top:26px}
+.shelf-page .recent-content .btn{margin-top:34px}
+.shelf-page .book-title{position:relative;top:3px}
+.discover-page .book-grid.five .book-title{position:relative;top:1px}
+.discover-page .book-grid.five .book-author{margin-top:4px}
+.discover-page .recommend{position:relative;display:block;padding:0}
+.discover-page .recommend .cover{position:absolute;left:24px;top:21px}
+.discover-page .recommend .rec-copy{position:absolute;left:185px;top:0;width:284px;padding:0}
+.discover-page .recommend .rec-copy small{position:absolute;left:1px;top:25px;font:500 13px/1.4 var(--sans)}
+.discover-page .recommend .rec-copy h3{position:absolute;left:0;top:70px;margin:0;font:500 28px/1.3 var(--serif)}
+.discover-page .recommend .rec-copy span{position:absolute;left:0;top:116px;width:284px;font:400 15px/1.4 var(--sans)}
+.discover-page .recommend .rec-copy p{position:absolute;left:0;top:156px;width:284px;margin:0;font:400 16px/1.6 var(--sans)}
+.discover-page .recommend .cover{left:23px;top:20px}
+.discover-page .recommend .rec-copy{left:184px;top:-1px}
